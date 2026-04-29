@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Restaurant - Cart</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Step</strong>
+        <span>Ordering</span>
+      </div>
+      <nav class="top-nav">
+        <a href="./index.html">Home</a>
+        <a class="active" href="./cart.html">Cart</a>
+      </nav>
+    </header>
+
+    <main class="container cart-page">
+      <h2 class="page-title">Your Order</h2>
+      <div class="cart-table-head">
+        <span></span>
+        <span>Product</span>
+        <span>Qty</span>
+        <span>Price</span>
+        <span>Total</span>
+      </div>
+
+      <div id="cartList" class="cart-list"></div>
+      <p id="cartEmpty" class="empty-text">Your cart is empty.</p>
+
+      <section class="checkout-bar">
+        <p>Total : <strong id="totalPrice">$0.00</strong></p>
+        <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+      </section>
+    </main>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>

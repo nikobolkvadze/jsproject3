@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Restaurant - Menu</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Step</strong>
+        <span>Ordering</span>
+      </div>
+      <nav class="top-nav">
+        <a href="./index.html">Home</a>
+        <a class="active" href="./cart.html">Cart</a>
+      </nav>
+    </header>
+
+    <main class="container menu-page">
+      <h2 class="page-title">Categories</h2>
+      <nav id="categoryTabs" class="category-tabs"></nav>
+
+      <section class="menu-layout">
+        <aside class="filters">
+          <div class="filters-head">
+            <h2>Filter</h2>
+            <span>▼</span>
+          </div>
+
+          <p class="muted">
+            Spiciness: <strong id="spicinessValue">Not Chosen</strong>
+          </p>
+          <input type="range" id="spicinessFilter" min="0" max="4" value="0" />
+
+          <label class="checkbox">
+            <input type="checkbox" id="nutsFilter" />
+            No Nuts
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" id="vegFilter" />
+            Vegetarian Only
+          </label>
+          <button id="resetFiltersBtn" class="btn-danger reset-btn">RESET</button>
+        </aside>
+
+        <section class="products-section">
+          <div class="products-tools">
+            <input
+              type="text"
+              id="searchFilter"
+              placeholder="Search dish name..."
+            />
+            <div id="searchSuggestions" class="search-suggestions" hidden></div>
+          </div>
+          <p id="menuLoading" class="status-text">Loading dishes...</p>
+          <p id="menuError" class="status-text error-text" hidden>
+            Failed to load data. Please refresh the page.
+          </p>
+          <div id="productsGrid" class="products-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
