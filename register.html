@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Online Restaurant</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Step</strong>
+        <span>Ordering</span>
+      </div>
+      <nav class="top-nav">
+        <a href="./index.html">Home/Menu</a>
+        <a href="./cart.html">Cart</a>
+      </nav>
+      <div id="authNav" class="auth-nav"></div>
+    </header>
+
+    <main class="container auth-page">
+      <h2 class="page-title">Register</h2>
+      <form id="registerForm" class="form-card" novalidate>
+        <label for="registerName">Full name</label>
+        <input id="registerName" name="fullName" type="text" placeholder="John Doe" />
+
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" name="email" type="email" placeholder="you@example.com" />
+
+        <label for="registerPassword">Password</label>
+        <input
+          id="registerPassword"
+          name="password"
+          type="password"
+          placeholder="Minimum 6 characters"
+        />
+
+        <label for="registerConfirmPassword">Confirm password</label>
+        <input
+          id="registerConfirmPassword"
+          name="confirmPassword"
+          type="password"
+          placeholder="Repeat password"
+        />
+
+        <button type="submit" class="btn-danger full-width">Register</button>
+      </form>
+      <p id="registerMessage" class="form-message" role="alert"></p>
+      <p class="auth-switch">
+        Already have an account?
+        <a href="./login.html">Login here</a>
+      </p>
+    </main>
+
+    <script src="./js/auth.js"></script>
+  </body>
+</html>
